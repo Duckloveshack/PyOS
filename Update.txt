@@ -1,0 +1,947 @@
+import time
+import os
+import platform
+PasswordOn = 100
+shutdownPyOS = 0
+EXITApp = 0
+GuestOn = 100
+timeout = time.sleep
+PassLogin = "0"
+Password = "DuckLovesHack"
+PassHint = "The Password is DuckLovesHack"
+U = "USER"
+os.system('title PyOS')
+def cls():
+	if platform.system() == "Windows":
+		os.system('cls')
+	else:
+		os.system('clear')
+def dir():
+	if platform.system() == "Windows":
+		os.system('dir /b')
+	else:
+		os.system('ls')
+def title(title):
+	if platform.system() == "Windows":
+		os.system('title ' + title)
+title("PyOS")
+print("PPPPPPPPPPPPPPPPP                                 OOOOOOOOO        SSSSSSSSSSSSSSS")
+print("P::::::::::::::::P                              OO:::::::::OO    SS:::::::::::::::S")
+print("P::::::PPPPPP:::::P                           OO:::::::::::::OO S:::::SSSSSS::::::S")
+print("PP:::::P     P:::::P                         O:::::::OOO:::::::OS:::::S     SSSSSSS")
+print("  P::::P     P:::::Pyyyyyyy           yyyyyyyO::::::O   O::::::OS:::::S            ")
+print("  P::::P     P:::::P y:::::y         y:::::y O:::::O     O:::::OS:::::S            ")
+print("  P::::PPPPPP:::::P   y:::::y       y:::::y  O:::::O     O:::::O S::::SSSS         ")
+print("  P:::::::::::::PP     y:::::y     y:::::y   O:::::O     O:::::O  SS::::::SSSSS    ")
+print("  P::::PPPPPPPPP        y:::::y   y:::::y    O:::::O     O:::::O    SSS::::::::SS  ")
+print("  P::::P                 y:::::y y:::::y     O:::::O     O:::::O       SSSSSS::::S ")
+print("  P::::P                  y:::::y:::::y      O:::::O     O:::::O            S:::::S")
+print("  P::::P                   y:::::::::y       O::::::O   O::::::O            S:::::S")
+print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS     S:::::S")
+print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
+print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
+print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
+print("                          y:::::y                                                  ")
+print("                         y:::::y                   PUBLIC PREVIEW                  ")
+print("                        y:::::y                                                    ")
+print("                      y:::::y                                                      ")
+print("                      yyyyyyy                                                      ")
+print("Use the launcher to start PyOS for intended functionality.")
+timeout(1)
+cls()
+title("PyOS - Login")
+print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+print()
+U = input("Username: ")
+if U == "1":
+	if GuestOn == 100:
+		closeGuest = 0
+		while closeGuest == 0:
+			title("PyOS - GUEST - Desktop")
+			EXITApp = 0
+			cls()
+			print("Welcome to PyOS, Guest. This is build 2006")
+			print("1 - Calculator")
+			print("2 - Changelog")
+			print("3 - Log In")
+			print("4 - Shutdown Menu")
+			Choice = input("Choice: ")
+			if Choice == "1":
+				while EXITApp == 0:
+					cls()
+					title("PyOS - Calculator")
+					print("Calculator - Version 1.0.0")
+					print("1 - Addition")
+					print("2 - Subtraction")
+					print("3 - Multiplication")
+					print("4 - Division")
+					print("5 - Multi-Solve")
+					print("6 - Exit")
+					Choice = input("Choice: ")
+					if Choice == "1":
+						cls()
+						print("Please choose 2 numbers you wish to add")
+						num1 = float(input())
+						num2 = float(input())
+						print(num1, "+", num2, "=", num1+num2)
+						input()
+					if Choice == "2":
+						print("Please choose 2 numbers you wish to subtract")
+						cls()
+						num1 = float(input())
+						num2 = float(input())
+						print(num1, "-", num2, "=", num1-num2)
+						input()
+					if Choice == "3":
+						print("Please choose 2 numbers you wish to multiply")
+						cls()
+						num1 = float(input())
+						num2 = float(input())
+						print(num1, "*", num2, "=", num1*num2)
+						input()
+					if Choice == "4":
+						print("Please choose 2 numbers you wish to divide")
+						cls()
+						num1 = float(input())
+						num2 = float(input())
+						print(num1, "/", num2, "=", num1/num2)
+					if Choice == "5":
+						cls()
+						print("Type the exercise you want to solve:")
+						print("Addition = +")
+						print("Subtraction = -")
+						print("Multiplication = *")
+						print("Division = /")
+						print(eval(input()))
+						input()
+						if Choice == "6":
+							EXITApp = 1
+			if Choice == "2":
+				while EXITApp == 0:
+					cls()
+					title("PyOS - Changelog")
+					print("PyOS Changelog:")
+					print("Prototype 0706:")
+					print("The boot sequence and Calculator were added")
+					print("Prototype 0806:")
+					print("Changelog and Text Pad were added")
+					print("Prototype 1906:")
+					print("Settings, restart and log off were added")
+					print("Prototype 2006:")
+					print("Guest Mode was added")
+					print()
+					print("Press [Enter] to exit")
+					input()
+					EXITApp = 1
+			if Choice == "3":
+				cls()
+				title("PyOS - Login")
+				print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+				print()
+				U = input("Username: ")
+				if U != "1":
+					closeGuest = 1
+			if Choice == "4":
+				PassLogin = "0"
+				while EXITApp == 0:
+					cls()
+					title("PyOS - Shutdown Menu")
+					print("Shutdown Menu")
+					print("1 - Shutdown")
+					print("2 - Reboot")
+					print("3 - Exit")
+					Choice = input("Choice: ")
+					if Choice == "1":
+						print("Shutting down PyOS...")
+						timeout(3)
+						shutdownPyOS = 1
+						EXITApp = 1
+						closeGuest = 1
+						quit()
+					if Choice == "2":
+						print("Wait please...")
+						timeout(3)
+						cls()
+						title("PyOS")
+						print("PPPPPPPPPPPPPPPPP                                 OOOOOOOOO        SSSSSSSSSSSSSSS")
+						print("P::::::::::::::::P                              OO:::::::::OO    SS:::::::::::::::S")
+						print("P::::::PPPPPP:::::P                           OO:::::::::::::OO S:::::SSSSSS::::::S")
+						print("PP:::::P     P:::::P                         O:::::::OOO:::::::OS:::::S     SSSSSSS")
+						print("  P::::P     P:::::Pyyyyyyy           yyyyyyyO::::::O   O::::::OS:::::S            ")
+						print("  P::::P     P:::::P y:::::y         y:::::y O:::::O     O:::::OS:::::S            ")
+						print("  P::::PPPPPP:::::P   y:::::y       y:::::y  O:::::O     O:::::O S::::SSSS         ")
+						print("  P:::::::::::::PP     y:::::y     y:::::y   O:::::O     O:::::O  SS::::::SSSSS    ")
+						print("  P::::PPPPPPPPP        y:::::y   y:::::y    O:::::O     O:::::O    SSS::::::::SS  ")
+						print("  P::::P                 y:::::y y:::::y     O:::::O     O:::::O       SSSSSS::::S ")
+						print("  P::::P                  y:::::y:::::y      O:::::O     O:::::O            S:::::S")
+						print("  P::::P                   y:::::::::y       O::::::O   O::::::O            S:::::S")
+						print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS     S:::::S")
+						print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
+						print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
+						print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
+						print("                          y:::::y                                                  ")
+						print("                         y:::::y                   PUBLIC PREVIEW                  ")
+						print("                        y:::::y                                                    ")
+						print("                      y:::::y                                                      ")
+						print("                      yyyyyyy                                                      ")
+						print("Use the launcher to start PyOS for intended functionality.")
+						timeout(1)
+						cls()
+						title("PyOS - Login")
+						print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+						print()
+						U = input("Username: ")
+						if U != "1":
+							closeGuest = 1
+							EXITApp = 1
+					if Choice == "3":
+						EXITApp = 1
+if PasswordOn == 100:				
+	while PassLogin != Password:
+		cls()
+		print("Welcome to the PyOS prototype. Type your password to proceed with this prototype. [Type [1] for hint]")
+		print()
+		print("Username:", U)
+		PassLogin = input("Password: ")
+		if PassLogin == "1":
+			cls()
+			print("Welcome to the PyOS prototype. Type your password to proceed with this prototype.")
+			print("Hint:", PassHint)
+			print()
+			print("Username:", U)
+			PassLogin = input("Password: ")
+while shutdownPyOS == 0:
+	cls()
+	EXITApp = 0
+	title("PyOS - Desktop")
+	print("Welcome to PyOS,", U + ". This is build 2006.")	
+	print("1 - Calculator")
+	print("2 - Changelog")
+	print("3 - Text Pad")
+	print("4 - Settings")
+	print("5 - Shutdown Menu")
+	Choice = input("Choice: ")
+	if Choice == "1":
+		while EXITApp == 0:
+			cls()
+			title("PyOS - Calculator")
+			print("Calculator - Version 1.0.0")
+			print("1 - Addition")
+			print("2 - Subtraction")
+			print("3 - Multiplication")
+			print("4 - Division")
+			print("5 - Multi-Solve")
+			print("6 - Exit")
+			Choice = input("Choice: ")
+			if Choice == "1":
+				cls()
+				print("Please choose 2 numbers you wish to add")
+				num1 = float(input())
+				num2 = float(input())
+				print(num1, "+", num2, "=", num1+num2)
+				input()
+			if Choice == "2":
+				print("Please choose 2 numbers you wish to subtract")
+				cls()
+				num1 = float(input())
+				num2 = float(input())
+				print(num1, "-", num2, "=", num1-num2)
+				input()
+			if Choice == "3":
+				print("Please choose 2 numbers you wish to multiply")
+				cls()
+				num1 = float(input())
+				num2 = float(input())
+				print(num1, "*", num2, "=", num1*num2)
+				input()
+			if Choice == "4":
+				print("Please choose 2 numbers you wish to divide")
+				cls()
+				num1 = float(input())
+				num2 = float(input())
+				print(num1, "/", num2, "=", num1/num2)
+			if Choice == "5":
+				cls()
+				print("Type the exercise you want to solve:")
+				print("Addition = +")
+				print("Subtraction = -")
+				print("Multiplication = *")
+				print("Division = /")
+				print(eval(input()))
+				input()
+			if Choice == "6":
+				EXITApp = 1
+	if Choice == "2":
+		while EXITApp == 0:
+			cls()
+			title("PyOS - Changelog")
+			print("PyOS Changelog:")
+			print("Prototype 0706:")
+			print("The boot sequence and Calculator were added")
+			print("Prototype 0806:")
+			print("Changelog and Text Pad were added")
+			print("Prototype 1906:")
+			print("Settings, restart and log off were added")
+			print("Prototype 2006:")
+			print("Guest Mode was added")
+			print()
+			print("Press [Enter] to exit")
+			input()
+			EXITApp = 1
+	if Choice == "3":
+		while EXITApp == 0:
+			cls()
+			title("PyOS - TextPad")
+			print("TextPad version 0.1")
+			print("1 - Create a new text document")
+			print("2 - Open a text document")
+			print("3 - Delete a text document")
+			print("4 - Exit")
+			Choice = input("Choice: ")
+			if Choice == "1":
+				cls()
+				print("Please type the name of the text file you want to make. (It can't contain spaces) (Type [1] to exit)")
+				filecreate = input()
+				if filecreate != "1":
+					f=open(filecreate + '.txt',"w+")
+					cls()
+					print("How many lines do you want the file to have? (1-100)")
+					filelines = int(input())
+					if filelines > 0 and filelines < 101:
+						for i in range(filelines):
+							i=0
+							cls()
+							print("Write the text of the file. (Use [ENTER] to proceed into the next line)")
+							filetext = input()
+							f.write(filetext + '\n')
+							i=i+1
+						f=open(filecreate + '.txt',"w+")
+			if Choice == "2":
+				cls()
+				print("Please choose a file to open. (Type without extension) [Type [1] to exit] ")
+				dir()
+				fileopen = input()
+				if fileopen != "1":
+					f=open(fileopen + ".txt", "r")
+					if f.mode == 'r':
+						FileContents =f.read()
+						cls()
+						print("Contents from", fileopen + ".txt:")
+						print(FileContents)
+					else:
+						print("Unable to open file")
+					input()
+			if Choice == "3":
+				cls()
+				print("Please choose a file to delete. (Type without extension) [Type [1] to exit]")
+				dir()
+				filedel = input()
+				if filedel != "1":
+					print("Removing", filedel + ".txt...")
+					os.remove(filedel + ".txt")
+			if Choice == "4":
+				EXITApp = 1
+				Choice = "0"
+	if Choice == "4":
+		while EXITApp == 0:
+			cls()
+			title("PyOS - Settings")
+			print("Settings - Version 0.1.0")
+			print("1 - Users")
+			print("2 - Exit")
+			Choice = input("Choice: ")
+			if Choice == "1":
+				cls()
+				print("Settings - Version 0.1.0")
+				print("1 -", U)
+				print("2 - Guest (COMMING SOON)")
+				print("3 - Back")
+				Choice == input("Choice: ")
+				if Choice == "1":
+					cls()
+					print("Settings - Version 0.1.0")
+					print("1 - Change Username")
+					print("2 - Change Password")
+					print("3 - Change Password Hint")
+					if PasswordOn == 100:
+						print("4 - Password - On")
+					else:
+						print("4 - Password - Off")
+					print("5 - Back")
+					Choice = input("Choice: ")
+					if Choice == "1":
+						cls()
+						U = input("Type your new username: ")
+						print("Changing Name...")
+						timeout(4)
+					if Choice == "2":
+						cls()
+						print("Type your current password to confirm yourself.")
+						print("Warning: This will reset your hint as well")
+						PassConf = input()
+						if PassConf == Password:
+							cls()
+							PassNew = input("Type your new password: ")
+							if PassNew == Password:
+								print("You shouldn't type any of your previous passwords!")
+								timeout(1)
+							else:
+								cls()
+								PassNew2 = input("Confirm your password: ")
+								if PassNew2 == PassNew:
+									Password = PassNew
+									PassHint = "The Password is " + Password
+									print("The Password was changed. Wait till you will be redirected to the login screen.")
+									timeout(1)
+									cls()
+									title("PyOS - Login")
+									print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+									print()
+									U = input("Username: ")
+									if U == "1":
+										if GuestOn == 100:
+											closeGuest = 0
+											while closeGuest == 0:
+												title("PyOS - GUEST - Desktop")
+												EXITApp = 0
+												cls()
+												print("Welcome to PyOS, Guest. This is build 2006")
+												print("1 - Calculator")
+												print("2 - Changelog")
+												print("3 - Log In")
+												print("4 - Shutdown Menu")
+												Choice = input("Choice: ")
+												if Choice == "1":
+													while EXITApp == 0:
+														cls()
+														title("PyOS - Calculator")
+														print("Calculator - Version 1.0.0")
+														print("1 - Addition")
+														print("2 - Subtraction")
+														print("3 - Multiplication")
+														print("4 - Division")
+														print("5 - Multi-Solve")
+														print("6 - Exit")
+														Choice = input("Choice: ")
+														if Choice == "1":
+															cls()
+															print("Please choose 2 numbers you wish to add")
+															num1 = float(input())
+															num2 = float(input())
+															print(num1, "+", num2, "=", num1+num2)
+															input()
+														if Choice == "2":
+															print("Please choose 2 numbers you wish to subtract")
+															cls()
+															num1 = float(input())
+															num2 = float(input())
+															print(num1, "-", num2, "=", num1-num2)
+															input()
+														if Choice == "3":
+															print("Please choose 2 numbers you wish to multiply")
+															cls()
+															num1 = float(input())
+															num2 = float(input())
+															print(num1, "*", num2, "=", num1*num2)
+															input()
+														if Choice == "4":
+															print("Please choose 2 numbers you wish to divide")
+															cls()
+															num1 = float(input())
+															num2 = float(input())
+															print(num1, "/", num2, "=", num1/num2)
+														if Choice == "5":
+															cls()
+															print("Type the exercise you want to solve:")
+															print("Addition = +")
+															print("Subtraction = -")
+															print("Multiplication = *")
+															print("Division = /")
+															print(eval(input()))
+															input()
+															if Choice == "6":
+																EXITApp = 1
+												if Choice == "2":
+													while EXITApp == 0:
+														cls()
+														title("PyOS - Changelog")
+														print("PyOS Changelog:")
+														print("Prototype 0706:")
+														print("The boot sequence and Calculator were added")
+														print("Prototype 0806:")
+														print("Changelog and Text Pad were added")
+														print("Prototype 1906:")
+														print("Settings, restart and log off were added")
+														print("Prototype 2006:")
+														print("Guest Mode was added")
+														print()
+														print("Press [Enter] to exit")
+														input()
+														EXITApp = 1
+												if Choice == "3":
+													cls()
+													title("PyOS - Login")
+													print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype.")
+													print()
+													U = input("Username: ")
+													if U != "1":
+														closeGuest = 1
+												if Choice == "4":
+													PassLogin = "0"
+													while EXITApp == 0:
+														cls()
+														title("PyOS - Shutdown Menu")
+														print("Shutdown Menu")
+														print("1 - Shutdown")
+														print("2 - Reboot")
+														print("3 - Exit")
+														Choice = input("Choice: ")
+														if Choice == "1":
+															print("Shutting down PyOS...")
+															timeout(3)
+															shutdownPyOS = 1
+															EXITApp = 1
+															closeGuest = 1
+															quit()
+														if Choice == "2":
+															print("Wait please...")
+															timeout(3)
+															cls()
+															title("PyOS")
+															print("PPPPPPPPPPPPPPPPP                                 OOOOOOOOO        SSSSSSSSSSSSSSS")
+															print("P::::::::::::::::P                              OO:::::::::OO    SS:::::::::::::::S")
+															print("P::::::PPPPPP:::::P                           OO:::::::::::::OO S:::::SSSSSS::::::S")
+															print("PP:::::P     P:::::P                         O:::::::OOO:::::::OS:::::S     SSSSSSS")
+															print("  P::::P     P:::::Pyyyyyyy           yyyyyyyO::::::O   O::::::OS:::::S            ")
+															print("  P::::P     P:::::P y:::::y         y:::::y O:::::O     O:::::OS:::::S            ")
+															print("  P::::PPPPPP:::::P   y:::::y       y:::::y  O:::::O     O:::::O S::::SSSS         ")
+															print("  P:::::::::::::PP     y:::::y     y:::::y   O:::::O     O:::::O  SS::::::SSSSS    ")
+															print("  P::::PPPPPPPPP        y:::::y   y:::::y    O:::::O     O:::::O    SSS::::::::SS  ")
+															print("  P::::P                 y:::::y y:::::y     O:::::O     O:::::O       SSSSSS::::S ")
+															print("  P::::P                  y:::::y:::::y      O:::::O     O:::::O            S:::::S")
+															print("  P::::P                   y:::::::::y       O::::::O   O::::::O            S:::::S")
+															print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS     S:::::S")
+															print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
+															print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
+															print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
+															print("                          y:::::y                                                  ")
+															print("                         y:::::y                   PUBLIC PREVIEW                  ")
+															print("                        y:::::y                                                    ")
+															print("                      y:::::y                                                      ")
+															print("                      yyyyyyy                                                      ")
+															print("Use the launcher to start PyOS for intended functionality.")
+															timeout(1)
+															cls()
+															title("PyOS - Login")
+															print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+															print()
+															U = input("Username: ")
+															if U != "1":
+																closeGuest = 1
+																EXITApp = 1
+														if Choice == "3":
+															EXITApp = 1
+									while PassLogin != Password:
+										cls()
+										print("Welcome to the PyOS prototype. Type your password to proceed with this prototype. [Type [1] for hint]")
+										print()
+										print("Username:", U)
+										PassLogin = input("Password: ")
+										if PassLogin == "1":
+											cls()
+											print("Welcome to the PyOS prototype. Type your password to proceed with this prototype.")
+											print("Hint:", PassHint)
+											print()
+											print("Username:", U)
+											PassLogin = input("Password: ")
+									EXITApp = 1
+								else:
+									print("Your passwords do not match")
+									timeout(1)
+					if Choice == "3":
+						cls()
+						print("Change your password hint. [Type [2] to reset]")
+						print("Your current password is:", Password)
+						print()
+						HintChange = input("New Hint: ")
+						if HintChange == "2":
+							PassHint = "The Password is " + Password
+						else:
+							PassHint = HintChange
+						timeout(1)
+			if Choice == "2":
+				EXITApp = 1
+				Choice = "0"
+	if Choice == "5":
+		PassLogin = "0"
+		while EXITApp == 0:
+			cls()
+			title("PyOS - Shutdown Menu")
+			print("Shutdown Menu")
+			print("1 - Shutdown")
+			print("2 - Reboot")
+			print("3 - Log out")
+			print("4 - Exit")
+			Choice = input("Choice: ")
+			if Choice == "1":
+				print("Shutting down PyOS...")
+				timeout(3)
+				shutdownPyOS = 1
+				EXITApp = 1
+			if Choice == "2":
+				print("Wait please...")
+				timeout(3)
+				cls()
+				title("PyOS")
+				print("PPPPPPPPPPPPPPPPP                                 OOOOOOOOO        SSSSSSSSSSSSSSS")
+				print("P::::::::::::::::P                              OO:::::::::OO    SS:::::::::::::::S")
+				print("P::::::PPPPPP:::::P                           OO:::::::::::::OO S:::::SSSSSS::::::S")
+				print("PP:::::P     P:::::P                         O:::::::OOO:::::::OS:::::S     SSSSSSS")
+				print("  P::::P     P:::::Pyyyyyyy           yyyyyyyO::::::O   O::::::OS:::::S            ")
+				print("  P::::P     P:::::P y:::::y         y:::::y O:::::O     O:::::OS:::::S            ")
+				print("  P::::PPPPPP:::::P   y:::::y       y:::::y  O:::::O     O:::::O S::::SSSS         ")
+				print("  P:::::::::::::PP     y:::::y     y:::::y   O:::::O     O:::::O  SS::::::SSSSS    ")
+				print("  P::::PPPPPPPPP        y:::::y   y:::::y    O:::::O     O:::::O    SSS::::::::SS  ")
+				print("  P::::P                 y:::::y y:::::y     O:::::O     O:::::O       SSSSSS::::S ")
+				print("  P::::P                  y:::::y:::::y      O:::::O     O:::::O            S:::::S")
+				print("  P::::P                   y:::::::::y       O::::::O   O::::::O            S:::::S")
+				print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS     S:::::S")
+				print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
+				print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
+				print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
+				print("                          y:::::y                                                  ")
+				print("                         y:::::y                   PUBLIC PREVIEW                  ")
+				print("                        y:::::y                                                    ")
+				print("                      y:::::y                                                      ")
+				print("                      yyyyyyy                                                      ")
+				print("Use the launcher to start PyOS for intended functionality.")
+				timeout(1)
+				cls()
+				title("PyOS - Login")
+				print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+				print()
+				U = input("Username: ")
+				if U == "1":
+					if GuestOn == 100:
+						closeGuest = 0
+						while closeGuest == 0:
+							title("PyOS - GUEST - Desktop")
+							EXITApp = 0
+							cls()
+							print("Welcome to PyOS, Guest. This is build 2006")
+							print("1 - Calculator")
+							print("2 - Changelog")
+							print("3 - Log In")
+							print("4 - Shutdown Menu")
+							Choice = input("Choice: ")
+							if Choice == "1":
+								while EXITApp == 0:
+									cls()
+									title("PyOS - Calculator")
+									print("Calculator - Version 1.0.0")
+									print("1 - Addition")
+									print("2 - Subtraction")
+									print("3 - Multiplication")
+									print("4 - Division")
+									print("5 - Multi-Solve")
+									print("6 - Exit")
+									Choice = input("Choice: ")
+									if Choice == "1":
+										cls()
+										print("Please choose 2 numbers you wish to add")
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "+", num2, "=", num1+num2)
+										input()
+									if Choice == "2":
+										print("Please choose 2 numbers you wish to subtract")
+										cls()
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "-", num2, "=", num1-num2)
+										input()
+									if Choice == "3":
+										print("Please choose 2 numbers you wish to multiply")
+										cls()
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "*", num2, "=", num1*num2)
+										input()
+									if Choice == "4":
+										print("Please choose 2 numbers you wish to divide")
+										cls()
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "/", num2, "=", num1/num2)
+									if Choice == "5":
+										cls()
+										print("Type the exercise you want to solve:")
+										print("Addition = +")
+										print("Subtraction = -")
+										print("Multiplication = *")
+										print("Division = /")
+										print(eval(input()))
+										input()
+										if Choice == "6":
+											EXITApp = 1
+							if Choice == "2":
+								while EXITApp == 0:
+									cls()
+									title("PyOS - Changelog")
+									print("PyOS Changelog:")
+									print("Prototype 0706:")
+									print("The boot sequence and Calculator were added")
+									print("Prototype 0806:")
+									print("Changelog and Text Pad were added")
+									print("Prototype 1906:")
+									print("Settings, restart and log off were added")
+									print("Prototype 2006:")
+									print("Guest Mode was added")
+									print()
+									print("Press [Enter] to exit")
+									input()
+									EXITApp = 1
+							if Choice == "3":
+								cls()
+								title("PyOS - Login")
+								print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+								print()
+								U = input("Username: ")
+								if U != "1":
+									closeGuest = 1
+							if Choice == "4":
+								PassLogin = "0"
+								while EXITApp == 0:
+									cls()
+									title("PyOS - Shutdown Menu")
+									print("Shutdown Menu")
+									print("1 - Shutdown")
+									print("2 - Reboot")
+									print("3 - Exit")
+									Choice = input("Choice: ")
+									if Choice == "1":
+										print("Shutting down PyOS...")
+										timeout(3)
+										shutdownPyOS = 1
+										EXITApp = 1
+										closeGuest = 1
+										quit()
+									if Choice == "2":
+										print("Wait please...")
+										timeout(3)
+										cls()
+										title("PyOS")
+										print("PPPPPPPPPPPPPPPPP                                 OOOOOOOOO        SSSSSSSSSSSSSSS")
+										print("P::::::::::::::::P                              OO:::::::::OO    SS:::::::::::::::S")
+										print("P::::::PPPPPP:::::P                           OO:::::::::::::OO S:::::SSSSSS::::::S")
+										print("PP:::::P     P:::::P                         O:::::::OOO:::::::OS:::::S     SSSSSSS")
+										print("  P::::P     P:::::Pyyyyyyy           yyyyyyyO::::::O   O::::::OS:::::S            ")
+										print("  P::::P     P:::::P y:::::y         y:::::y O:::::O     O:::::OS:::::S            ")
+										print("  P::::PPPPPP:::::P   y:::::y       y:::::y  O:::::O     O:::::O S::::SSSS         ")
+										print("  P:::::::::::::PP     y:::::y     y:::::y   O:::::O     O:::::O  SS::::::SSSSS    ")
+										print("  P::::PPPPPPPPP        y:::::y   y:::::y    O:::::O     O:::::O    SSS::::::::SS  ")
+										print("  P::::P                 y:::::y y:::::y     O:::::O     O:::::O       SSSSSS::::S ")
+										print("  P::::P                  y:::::y:::::y      O:::::O     O:::::O            S:::::S")
+										print("  P::::P                   y:::::::::y       O::::::O   O::::::O            S:::::S")
+										print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS     S:::::S")
+										print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
+										print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
+										print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
+										print("                          y:::::y                                                  ")
+										print("                         y:::::y                   PUBLIC PREVIEW                  ")
+										print("                        y:::::y                                                    ")
+										print("                      y:::::y                                                      ")
+										print("                      yyyyyyy                                                      ")
+										print("Use the launcher to start PyOS for intended functionality.")
+										timeout(1)
+										cls()
+										title("PyOS - Login")
+										print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+										print()
+										U = input("Username: ")
+										if U != "1":
+											closeGuest = 1
+											EXITApp = 1
+									if Choice == "3":
+										EXITApp = 1
+				if PasswordOn == 100:
+					while PassLogin != Password:
+						cls()
+						print("Welcome to the PyOS prototype. Type your password to proceed with this prototype. [Type [1] for hint]")
+						print()
+						print("Username:", U)
+						PassLogin = input("Password: ")
+						if PassLogin == "1":
+							cls()
+							print("Welcome to the PyOS prototype. Type your password to proceed with this prototype.")
+							print("Hint:", PassHint)
+							print()
+							print("Username:", U)
+							PassLogin = input("Password: ")
+				EXITApp = 1
+			if Choice == "3":
+				cls()
+				title("PyOS - Login")
+				print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+				print()
+				U = input("Username: ")
+				if U == "1":
+					if GuestOn == 100:
+						closeGuest = 0
+						while closeGuest == 0:
+							title("PyOS - GUEST - Desktop")
+							EXITApp = 0
+							cls()
+							print("Welcome to PyOS, Guest. This is build 2006")
+							print("1 - Calculator")
+							print("2 - Changelog")
+							print("3 - Log In")
+							print("4 - Shutdown Menu")
+							Choice = input("Choice: ")
+							if Choice == "1":
+								while EXITApp == 0:
+									cls()
+									title("PyOS - Calculator")
+									print("Calculator - Version 1.0.0")
+									print("1 - Addition")
+									print("2 - Subtraction")
+									print("3 - Multiplication")
+									print("4 - Division")
+									print("5 - Multi-Solve")
+									print("6 - Exit")
+									Choice = input("Choice: ")
+									if Choice == "1":
+										cls()
+										print("Please choose 2 numbers you wish to add")
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "+", num2, "=", num1+num2)
+										input()
+									if Choice == "2":
+										print("Please choose 2 numbers you wish to subtract")
+										cls()
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "-", num2, "=", num1-num2)
+										input()
+									if Choice == "3":
+										print("Please choose 2 numbers you wish to multiply")
+										cls()
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "*", num2, "=", num1*num2)
+										input()
+									if Choice == "4":
+										print("Please choose 2 numbers you wish to divide")
+										cls()
+										num1 = float(input())
+										num2 = float(input())
+										print(num1, "/", num2, "=", num1/num2)
+									if Choice == "5":
+										cls()
+										print("Type the exercise you want to solve:")
+										print("Addition = +")
+										print("Subtraction = -")
+										print("Multiplication = *")
+										print("Division = /")
+										print(eval(input()))
+										input()
+										if Choice == "6":
+											EXITApp = 1
+							if Choice == "2":
+								while EXITApp == 0:
+									cls()
+									title("PyOS - Changelog")
+									print("PyOS Changelog:")
+									print("Prototype 0706:")
+									print("The boot sequence and Calculator were added")
+									print("Prototype 0806:")
+									print("Changelog and Text Pad were added")
+									print("Prototype 1906:")
+									print("Settings, restart and log off were added")
+									print("Prototype 2006:")
+									print("Guest Mode was added")
+									print()
+									print("Press [Enter] to exit")
+									input()
+									EXITApp = 1
+							if Choice == "3":
+								cls()
+								title("PyOS - Login")
+								print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype.")
+								print()
+								U = input("Username: ")
+								if U != "1":
+									closeGuest = 1
+							if Choice == "4":
+								PassLogin = "0"
+								while EXITApp == 0:
+									cls()
+									title("PyOS - Shutdown Menu")
+									print("Shutdown Menu")
+									print("1 - Shutdown")
+									print("2 - Reboot")
+									print("3 - Exit")
+									Choice = input("Choice: ")
+									if Choice == "1":
+										print("Shutting down PyOS...")
+										timeout(3)
+										shutdownPyOS = 1
+										EXITApp = 1
+										closeGuest = 1
+										quit()
+									if Choice == "2":
+										print("Wait please...")
+										timeout(3)
+										cls()
+										title("PyOS")
+										print("PPPPPPPPPPPPPPPPP                                 OOOOOOOOO        SSSSSSSSSSSSSSS")
+										print("P::::::::::::::::P                              OO:::::::::OO    SS:::::::::::::::S")
+										print("P::::::PPPPPP:::::P                           OO:::::::::::::OO S:::::SSSSSS::::::S")
+										print("PP:::::P     P:::::P                         O:::::::OOO:::::::OS:::::S     SSSSSSS")
+										print("  P::::P     P:::::Pyyyyyyy           yyyyyyyO::::::O   O::::::OS:::::S            ")
+										print("  P::::P     P:::::P y:::::y         y:::::y O:::::O     O:::::OS:::::S            ")
+										print("  P::::PPPPPP:::::P   y:::::y       y:::::y  O:::::O     O:::::O S::::SSSS         ")
+										print("  P:::::::::::::PP     y:::::y     y:::::y   O:::::O     O:::::O  SS::::::SSSSS    ")
+										print("  P::::PPPPPPPPP        y:::::y   y:::::y    O:::::O     O:::::O    SSS::::::::SS  ")
+										print("  P::::P                 y:::::y y:::::y     O:::::O     O:::::O       SSSSSS::::S ")
+										print("  P::::P                  y:::::y:::::y      O:::::O     O:::::O            S:::::S")
+										print("  P::::P                   y:::::::::y       O::::::O   O::::::O            S:::::S")
+										print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS     S:::::S")
+										print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
+										print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
+										print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
+										print("                          y:::::y                                                  ")
+										print("                         y:::::y                   PUBLIC PREVIEW                  ")
+										print("                        y:::::y                                                    ")
+										print("                      y:::::y                                                      ")
+										print("                      yyyyyyy                                                      ")
+										print("Use the launcher to start PyOS for intended functionality.")
+										timeout(1)
+										cls()
+										title("PyOS - Login")
+										print("Welcome to the PyOS prototype. Type your username and password to proceed with this prototype. [Type [1] for Guest]")
+										print()
+										U = input("Username: ")
+										if U != "1":
+											closeGuest = 1
+											EXITApp = 1
+									if Choice == "3":
+										EXITApp = 1
+				if PasswordOn == 100:
+					while PassLogin != Password:
+						cls()
+						print("Welcome to the PyOS prototype. Type your password to proceed with this prototype. [Type [1] for hint]")
+						print()
+						print("Username:", U)
+						PassLogin = input("Password: ")
+						if PassLogin == "1":
+							cls()
+							print("Welcome to the PyOS prototype. Type your password to proceed with this prototype.")
+							print("Hint:", PassHint)
+							print()
+							print("Username:", U)
+							PassLogin = input("Password: ")
+				EXITApp = 1
+			if Choice == "4":
+				EXITApp = 1
