@@ -10,7 +10,9 @@ PassLogin = "0"
 Password = "DuckLovesHack"
 PassHint = "The Password is DuckLovesHack"
 U = "USER"
-os.system('title PyOS')
+if os.path.exists("config.py") == True:
+	import config
+	from config import *
 def cls():
 	if platform.system() == "Windows":
 		os.system('cls')
@@ -41,7 +43,7 @@ print("PP::::::PP                  y:::::::y        O:::::::OOO:::::::OSSSSSSS  
 print("P::::::::P                   y:::::y          OO:::::::::::::OO S::::::SSSSSS:::::S")
 print("P::::::::P                  y:::::y             OO:::::::::OO   S:::::::::::::::SS ")
 print("PPPPPPPPPP                 y:::::y                OOOOOOOOO      SSSSSSSSSSSSSSS   ")
-print("                          y:::::y                                                  ")
+print("                          y:::::y                                                  ") 
 print("                         y:::::y                   PUBLIC PREVIEW                  ")
 print("                        y:::::y                                                    ")
 print("                      y:::::y                                                      ")
@@ -60,7 +62,7 @@ if U == "1":
 			title("PyOS - GUEST - Desktop")
 			EXITApp = 0
 			cls()
-			print("Welcome to PyOS, Guest. This is build 2006")
+			print("Welcome to PyOS, Guest. This is build 2406")
 			print("1 - Calculator")
 			print("2 - Changelog")
 			print("3 - Log In")
@@ -129,6 +131,8 @@ if U == "1":
 					print("Settings, restart and log off were added")
 					print("Prototype 2006:")
 					print("Guest Mode was added")
+					print("Prototype 2406:")
+					print("Settings Configurations were added")
 					print()
 					print("Press [Enter] to exit")
 					input()
@@ -214,7 +218,7 @@ while shutdownPyOS == 0:
 	cls()
 	EXITApp = 0
 	title("PyOS - Desktop")
-	print("Welcome to PyOS,", U + ". This is build 2006.")	
+	print("Welcome to PyOS,", U + ". This is build 2406.")	
 	print("1 - Calculator")
 	print("2 - Changelog")
 	print("3 - Text Pad")
@@ -284,6 +288,8 @@ while shutdownPyOS == 0:
 			print("Settings, restart and log off were added")
 			print("Prototype 2006:")
 			print("Guest Mode was added")
+			print("Prototype 2406:")
+			print("Settings Configurations were added")
 			print()
 			print("Press [Enter] to exit")
 			input()
@@ -346,20 +352,24 @@ while shutdownPyOS == 0:
 		while EXITApp == 0:
 			cls()
 			title("PyOS - Settings")
-			print("Settings - Version 0.1.0")
+			print("Settings - Version 0.2.0")
 			print("1 - Users")
-			print("2 - Exit")
+			print("2 - Configuration")
+			print("3 - Exit")
 			Choice = input("Choice: ")
 			if Choice == "1":
 				cls()
-				print("Settings - Version 0.1.0")
+				print("Settings - Version 0.2.0")
 				print("1 -", U)
-				print("2 - Guest (COMMING SOON)")
+				if GuestOn == 100:
+					print("2 - Guest - On")
+				else:
+					print("2 - Guest - Off")
 				print("3 - Back")
-				Choice == input("Choice: ")
+				Choice = input("Choice: ")
 				if Choice == "1":
 					cls()
-					print("Settings - Version 0.1.0")
+					print("Settings - Version 0.2.0")
 					print("1 - Change Username")
 					print("2 - Change Password")
 					print("3 - Change Password Hint")
@@ -405,7 +415,7 @@ while shutdownPyOS == 0:
 												title("PyOS - GUEST - Desktop")
 												EXITApp = 0
 												cls()
-												print("Welcome to PyOS, Guest. This is build 2006")
+												print("Welcome to PyOS, Guest. This is build 2406")
 												print("1 - Calculator")
 												print("2 - Changelog")
 												print("3 - Log In")
@@ -474,6 +484,8 @@ while shutdownPyOS == 0:
 														print("Settings, restart and log off were added")
 														print("Prototype 2006:")
 														print("Guest Mode was added")
+														print("Prototype 2406:")
+														print("Settings Configurations were added")
 														print()
 														print("Press [Enter] to exit")
 														input()
@@ -569,7 +581,61 @@ while shutdownPyOS == 0:
 						else:
 							PassHint = HintChange
 						timeout(1)
+					if Choice == "4":
+						cls()
+						if PasswordOn == 100:
+							print("Confirm that you're the current user")
+							PassCheck = input("Password: ")
+							if PassCheck == Password:
+								PasswordOn = 123
+						else:
+							Password = "DuckLovesHack"
+							PassHint = "The Password is DuckLovesHack"
+							PasswornOn = 123
+				if Choice == "2":
+					if GuestOn == 100:
+						GuestOn = 123
+					else:
+						GuestOn = 100
+					Choice = 0
 			if Choice == "2":
+				cls()
+				print("Settings - Version 0.2.0")
+				if os.path.exists("config.py") == True:
+					print("1 - Remake the configuration file")
+				else:
+					print("1 - Make the configuration file")
+				print("2 - Apply the configuration file")
+				print("3 - Delete the configuration file")
+				print("4 - Back")
+				Choice = input("Choice: ")
+				if Choice == "1":
+					cls()
+					print("Settings - Version 0.2.0")
+					print("Copying your settings...")
+					f=open('config.py',"w+")
+					f.write('Password = ' + '"' + Password + '"' + '\n')
+					f.write('PassHint = ' + '"' + PassHint + '"' + '\n')
+					f.write('PasswordOn = ' + str(PasswordOn) + '\n')
+					f.write('GuestOn = ' + str(GuestOn) + '\n')
+					f=open('config.py',"w+")
+					timeout(1)
+				if Choice == "2":
+					cls()
+					print("Settings - Version 0.2.0")
+					print("Applying your settings...")
+					if os.path.exists("config.py") == True:
+						import config
+						from config import *
+					timeout(1)
+				if Choice == "3":
+					cls()
+					print("Settings - Version 0.2.0")
+					print("Deleting the configuration file...")
+					if os.path.exists("config.py") == True:
+						os.remove("config.py")
+					timeout(1)
+			if Choice == "3":
 				EXITApp = 1
 				Choice = "0"
 	if Choice == "5":
@@ -628,7 +694,7 @@ while shutdownPyOS == 0:
 							title("PyOS - GUEST - Desktop")
 							EXITApp = 0
 							cls()
-							print("Welcome to PyOS, Guest. This is build 2006")
+							print("Welcome to PyOS, Guest. This is build 2406")
 							print("1 - Calculator")
 							print("2 - Changelog")
 							print("3 - Log In")
@@ -697,6 +763,8 @@ while shutdownPyOS == 0:
 									print("Settings, restart and log off were added")
 									print("Prototype 2006:")
 									print("Guest Mode was added")
+									print("Prototype 2406:")
+									print("Settings Configurations were added")
 									print()
 									print("Press [Enter] to exit")
 									input()
@@ -792,7 +860,7 @@ while shutdownPyOS == 0:
 							title("PyOS - GUEST - Desktop")
 							EXITApp = 0
 							cls()
-							print("Welcome to PyOS, Guest. This is build 2006")
+							print("Welcome to PyOS, Guest. This is build 2406")
 							print("1 - Calculator")
 							print("2 - Changelog")
 							print("3 - Log In")
@@ -861,6 +929,8 @@ while shutdownPyOS == 0:
 									print("Settings, restart and log off were added")
 									print("Prototype 2006:")
 									print("Guest Mode was added")
+									print("Prototype 2406:")
+									print("Settings Configurations were added")
 									print()
 									print("Press [Enter] to exit")
 									input()
