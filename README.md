@@ -4,7 +4,7 @@ PyOS for Python 3.X
 By [Duckloveshack](https://www.github.com/Duckloveshack)
 
 ## Windows Warning
-To use features like TextPad, you need to use the Windows PyOS batch launcher. I'm thinking of adding the update feature and making another one for UNIX
+To use features like TextPad, you need to use the Windows PyOS batch launcher. It's recommended for Unix as well
 
 ## All new language - but still the same
 Python offers new opportunities for MyOS, but it makes PyOS look very similar to MyOS.
